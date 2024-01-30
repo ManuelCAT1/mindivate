@@ -1,15 +1,3 @@
-mindivate.com {
-    reverse_proxy localhost:8000
-}
-
 http://13.49.77.33 {
-    reverse_proxy localhost:8000
-}
-
-http://mindivate.com  {
-    reverse_proxy localhost:8000
-}
-
-https://mindivate.com {
     reverse_proxy localhost:8000
 }
