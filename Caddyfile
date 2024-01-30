@@ -2,5 +2,5 @@ https://13.49.77.33 {
     reverse_proxy localhost:8000
 }
 http://13.49.77.33 {
-    reverse_proxy localhost:8000
+    redir https://13.49.77.33
 }
