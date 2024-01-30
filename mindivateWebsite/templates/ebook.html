@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='logo.png') }}">
+   
+    <script>
+        // Get the modal
+        document.addEventListener('DOMContentLoaded', function() {
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.querySelector(".claim");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "flex";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+
+});
+        </script>
+
+</head>
+
+<body>  
+    
+    <nav class="navbar">
+        <img src="{{ url_for('static', filename='logo.png') }}" class="logo">
+    </nav>
+ <div class="box">
+    <div class="container">
+        <h1>Want to get rich?</h1>
+        <div class="ebookDiv">
+        <img src="{{ url_for('static', filename='ebook.png') }}" class="ebook">
+    </div>
+        <div class="button">
+        <button class="claim">  <h2> CLAIM YOUR FREE EBOOK</h2></button>
+    </div>
+    </div>
+</div>
+    <div class="description">
+        <h3>
+            <p1>
+            Break free </p1>from the mundane and discover the secrets to wealth and freedom. 
+            
+            <br><br>
+            This eBook is not just advice, it's a game-changer for anyone eager to escape the rat race and embrace financial success.
+            <br><br>
+            Ready to unlock your potential and achieve greatness? Dive in now!
+
+
+
+
+
+
+
+
+
+
+
+        </h3>
+    </div>
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <form class="modal-form" method="POST" action="{{ url_for('views.ebookPage') }}">
+        
+        <div class="insInput">
+
+            <div class="name">
+
+        <input type="text" id="name" name="name" required placeholder="Your name:" class="input">
+        
+    </div>
+    <div class="email">
+        <input type="email" id="email" name="email" required placeholder="Your email:" class="input">
+    </div>
+    </div>
+<br>
+<div class="agree">
+        <label for="agree">
+
+            <input type="checkbox" id="agree" name="agree" required cla>
+            I agree to receive the e-book and subscribe to email marketing.
+          </label>
+        </div>
+<br>
+        <input type="submit" value="SUBMIT" class="submit">
+      </form>
+    </div>
+  
+  </div>
+
+
+
+</body>
