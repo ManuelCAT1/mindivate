@@ -15,15 +15,15 @@ def loginPage():
         password = request.form.get('password')
 
         user = User.query.filter_by(email=email).first()
-        # if user:
-        if password == "SUperMIndiHasloNoweGLog" and email == "admin@mindivate.com":
-            flash('Logged in successfully!', category='success')
-            login_user(user, remember=True)
-            return redirect(url_for('views.email'))
+        if user:
+            if password == "SUperMIndiHasloNoweGLog" and email == "admin@mindivate.com":
+                flash('Logged in successfully!', category='success')
+                login_user(user, remember=True)
+                return redirect(url_for('views.email'))
+            else:
+                flash('Incorrect password', category='error')
         else:
-            flash('Incorrect password', category='error')
-        # else:
-        #     flash('Email does not exist', category='error')
+            flash('Email does not exist', category='error')
     else:
         return render_template("login.html")
 
