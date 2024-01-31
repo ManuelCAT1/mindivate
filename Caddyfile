@@ -1,11 +1,9 @@
 
-http://mindivate.com {
+mindivate.com {
     reverse_proxy localhost:8000
 }
 
 
-
-
-https://mindivate.com {
-    redir https://mindivate.com 
+16.16.209.253 {
+    reverse_proxy localhost:8000
 }
