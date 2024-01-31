@@ -15,20 +15,20 @@ def loginPage():
         password = request.form.get('password')
 
         user = User.query.filter_by(email=email).first()
-        # if user:
-        #     print('user exsts')
-        if password == "SUperMIndiHasloNoweGLog":
-            
-            flash('Zalogowano się!', category='success')
-            login_user(user, remember=True)
-            session['username'] = user.username  # Set username in session
-            return redirect(url_for('views.email'))
+        if user:
+            print('user exsts')
+            if password == "SUperMIndiHasloNoweGLog":
+                
+                flash('Zalogowano się!', category='success')
+                login_user(user, remember=True)
+                session['username'] = user.username  # Set username in session
+                return redirect(url_for('views.email'))
 
+            else:
+                flash('Zła nazwa użytkownika lub hasło', category='error')
         else:
+            print('wrong name')
             flash('Zła nazwa użytkownika lub hasło', category='error')
-        # else:
-        #     print('wrong name')
-        #     flash('Zła nazwa użytkownika lub hasło', category='error')
 
         return redirect(url_for('auth.loginPage'))
 
