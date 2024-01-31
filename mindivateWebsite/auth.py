@@ -14,7 +14,7 @@ def loginPage():
         email = request.form.get('email')
         password = request.form.get('password')
 
-        # user = User.query.filter_by(email=email).first()
+        user = User.query.filter_by(email=email).first()
         # if user:
         if password == "SUperMIndiHasloNoweGLog" and email == "admin@mindivate.com":
             flash('Logged in successfully!', category='success')
