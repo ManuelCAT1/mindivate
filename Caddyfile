@@ -4,6 +4,6 @@ mindivate.com {
 }
 
 
-16.16.209.253 {
+http://16.16.209.253 {
     reverse_proxy localhost:8000
 }
