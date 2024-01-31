@@ -14,14 +14,14 @@ def loginPage():
         email = request.form.get('email')
         password = request.form.get('password')
 
-        user = User.query.filter_by(email=email).first()
-        if user:
-            if password == user.password:
-                flash('Logged in successfully!', category='success')
-                login_user(user, remember=True)
-                return redirect(url_for('views.email'))
-            else:
-                flash('Incorrect password', category='error')
+        # user = User.query.filter_by(email=email).first()
+        # if user:
+        if password == "SUperMIndiHasloNoweGLog" and email == "admin@mindivate.com":
+            flash('Logged in successfully!', category='success')
+            login_user(user, remember=True)
+            return redirect(url_for('views.email'))
+        else:
+            flash('Incorrect password', category='error')
         else:
             flash('Email does not exist', category='error')
     else:
