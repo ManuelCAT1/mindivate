@@ -105,8 +105,8 @@ def test():
 
 
 
-@views.route('/email', methods=['GET', "POST"])
-@login_required
+@views.route('/email/ejnfsjf4348f43njfdj94b34j3', methods=['GET', "POST"])
+
 def email():
     if not current_user.is_authenticated:  # Add this line to check if the user is not logged in
         return redirect(url_for('login'))
