@@ -26,6 +26,8 @@ def loginPage():
                 flash('Incorrect password', category='error')
                 print('incorrect pswrd')
         else:
+            print(email)
+            print(password)
             flash('Email does not exist', category='error')
             print('no email')
 
