@@ -30,7 +30,7 @@ def loginPage():
             print('no email')
 
     # This return statement will handle GET requests and POST requests that don't result in a redirect.
-    print('get statemtn")
+    print('get statemtn')
     return render_template("login.html")
 
 
