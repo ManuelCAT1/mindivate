@@ -1,5 +1,5 @@
 
-https://mindivate.com {
+http://mindivate.com {
     reverse_proxy localhost:8000
 }
 
