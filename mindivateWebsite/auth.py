@@ -16,8 +16,8 @@ def loginPage():
         password = request.form.get('password')
 
         user = User.query.filter_by(email=email).first()
-        if True:
-            if password == "SUperMIndiHasloNoweGLog":
+        if user:
+            if password == user.password:
                 print('logged in')
                 flash('Logged in successfully!', category='success')
                 login_user(user, remember=True)
