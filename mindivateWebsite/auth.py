@@ -11,21 +11,26 @@ auth = Blueprint('auth', __name__)
 @auth.route('/login', methods=['GET', 'POST'])
 def loginPage():
     if request.method == 'POST':
+        print('post staenemt')
         email = request.form.get('email')
         password = request.form.get('password')
 
         user = User.query.filter_by(email=email).first()
         if user:
             if password == "SUperMIndiHasloNoweGLog":
+                print('logged in')
                 flash('Logged in successfully!', category='success')
                 login_user(user, remember=True)
                 return redirect(url_for('views.email'))
             else:
                 flash('Incorrect password', category='error')
+                print('incorrect pswrd')
         else:
             flash('Email does not exist', category='error')
+            print('no email')
 
     # This return statement will handle GET requests and POST requests that don't result in a redirect.
+    print('get statemtn")
     return render_template("login.html")
 
 
