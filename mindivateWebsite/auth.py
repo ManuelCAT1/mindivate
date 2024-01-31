@@ -10,7 +10,7 @@ auth = Blueprint('auth', __name__)
 
 @auth.route('/login', methods=['GET', 'POST'])
 def loginPage():
-    if True:
+    if request.method == 'POST':
         email = request.form.get('email')
         password = request.form.get('password')
 
@@ -24,8 +24,10 @@ def loginPage():
                 flash('Incorrect password', category='error')
         else:
             flash('Email does not exist', category='error')
-    else:
-        return render_template("login.html")
+
+    # This return statement will handle GET requests and POST requests that don't result in a redirect.
+    return render_template("login.html")
+
 
         
 
