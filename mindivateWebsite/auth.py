@@ -22,8 +22,8 @@ def loginPage():
             return redirect(url_for('views.email'))
         else:
             flash('Incorrect password', category='error')
-        else:
-            flash('Email does not exist', category='error')
+        # else:
+        #     flash('Email does not exist', category='error')
     else:
         return render_template("login.html")
 
