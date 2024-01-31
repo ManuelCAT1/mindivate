@@ -16,7 +16,7 @@ def loginPage():
 
         user = User.query.filter_by(email=email).first()
         if user:
-            if password == "SUperMIndiHasloNoweGLog" and email == "admin@mindivate.com":
+            if password == user.password:
                 flash('Logged in successfully!', category='success')
                 login_user(user, remember=True)
                 return redirect(url_for('views.email'))
