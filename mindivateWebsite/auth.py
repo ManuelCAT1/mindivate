@@ -16,6 +16,7 @@ def loginPage():
 
         user = User.query.filter_by(email=email).first()
         if user:
+            print('user exsts')
             if password == user.password:
                 
                 flash('Zalogowano się!', category='success')
@@ -26,6 +27,7 @@ def loginPage():
             else:
                 flash('Zła nazwa użytkownika lub hasło', category='error')
         else:
+            print('wrong name')
             flash('Zła nazwa użytkownika lub hasło', category='error')
 
         return redirect(url_for('auth.loginPage'))
