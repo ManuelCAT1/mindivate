@@ -79,7 +79,7 @@ def ebookPage():
             <p>Best regards,<br>Your Team</p>
         </div>
         <div class="footer">
-            <p>&copy; [Your Company Name] - All Rights Reserved</p>
+            <p>&copy; Mindivate - All Rights Reserved</p>
         </div>
     </div>
 </body>
