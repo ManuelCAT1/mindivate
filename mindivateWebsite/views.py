@@ -74,9 +74,10 @@ def ebookPage():
             <p>Thank you for downloading our eBook! Please click the button below to start your download.</p>
             <!-- Download link -->
             <a href="mindivate.com/download/59853959457" class="download-button" download>Download eBook</a>
+            <br>
             <p>If you have any questions or need further assistance, please feel free to reach out.</p>
             <p>Happy reading!</p>
-            <p>Best regards,<br>Your Team</p>
+            <p>Best regards,<br>Mindivate</p>
         </div>
         <div class="footer">
             <p>&copy; Mindivate - All Rights Reserved</p>
