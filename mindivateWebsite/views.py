@@ -67,24 +67,54 @@ def ebookPage():
         }
     </style>
 </head>
+
+
+<head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  .email-link {
+    color: #3498DB;
+    text-decoration: none;
+    font-weight: bold;
+  }
+</style>
+</head>
 <body>
-    <div class="container">
-        <div class="message">
-            <p>Hi there,</p>
-            <p>Thank you for downloading our eBook! Please click the button below to start your download.</p>
-            <!-- Download link -->
-            <a href="mindivate.com/download/59853959457" class="download-button" download>Download eBook</a>
-            <br>
-            <p>If you have any questions or need further assistance, please feel free to reach out.</p>
-            <p>Happy reading!</p>
-            <p>Best regards,<br>Mindivate</p>
-        </div>
-        <div class="footer">
-            <p>&copy; Mindivate - All Rights Reserved</p>
-        </div>
-    </div>
+
+<p>Hi there {{ name }},</p>
+
+<p>For too long you have procrastinated,</p>
+
+<strong><u><p class="highlight">It is finally time to change that.</p></u></strong>
+
+<p>This ebook is your first step to achieving success.</p>
+
+<p>In addition to that,</p>
+<p>You will also receive <strong><u>weekly emails </u></strong> from me.</p>
+
+<p>These emails will be packed with everything I know.</p>
+<p>Money. Gym. Masculinity. Discipline.</p>
+<p>All of that you get for completely free...</p>
+
+<u><p>This is the <span class="highlight">opportunity of your life,</u></span></p>
+
+<p>If you put in the work,</p>
+<p><strong><u><span class="highlight">There is no way for you to fail</span></p> </strong> </u>
+
+  <p><a href="mindivate.com/download/59853959457" class="email-link">👉==Click here to get the ebook==</a></p>
+
+<p>Thank you for signing up</p>
+
+<p>-Mindvate</p>
+
 </body>
 </html>
+
 """
             msg = Message(topic, recipients=[email], html=htmlEBOOK)
             mail.send(msg)
