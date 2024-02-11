@@ -122,7 +122,7 @@ def ebookPage():
 </html>
 
 """, name=name)
-            msg = Message(topic, recipients=[email], html=htmlEBOOK)
+            msg = Message(topic, recipients=[email], html=htmlEBOOK, sender=("Mindivate", "email@mindivate.com"))
             mail.send(msg)
             db.session.add(new_email_user)
             db.session.commit()
