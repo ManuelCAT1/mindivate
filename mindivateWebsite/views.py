@@ -28,7 +28,7 @@ def ebookPage():
         else:
             new_email_user = EmailUser(email=email, name=name)
 
-            topic = "Claim Your eBook Now"
+            topic = "It is time you finally take action"
                     
             htmlEBOOK = render_template_string("""
 <html>
