@@ -1,4 +1,5 @@
-from flask import Blueprint, render_template, request, flash, redirect, url_for, current_app, session
+from flask import Blueprint, render_template, request, flash, redirect, url_for, current_app, session, render_template_string
+# ... the rest of your imports
 from flask_login import login_required, current_user
 from .models import EmailUser
 from flask_mail import Mail, Message
