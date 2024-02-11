@@ -13,7 +13,7 @@ views = Blueprint('views', __name__)
 def ebookPage():
     email = request.form.get('email')
     name = request.form.get('name')
-
+    print(name)
 
 
     # if not email:
@@ -121,7 +121,7 @@ def ebookPage():
 </body>
 </html>
 
-""", namee=name)
+""", name=name)
             msg = Message(topic, recipients=[email], html=htmlEBOOK)
             mail.send(msg)
             db.session.add(new_email_user)
