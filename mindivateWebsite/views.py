@@ -112,7 +112,7 @@ def ebookPage():
 
 <p><strong><u><span class="highlight">There is no way for you to fail</span></p> </strong> </u>
 
-  <p><a href="mindivate.com/download/59853959457" class="email-link">👉==Click here to get the ebook==</a></p>
+  <p><a href="/download/59853959457" class="email-link">👉==Click here to get the ebook==</a></p>
 
 <p>Thank you for signing up</p>
 
