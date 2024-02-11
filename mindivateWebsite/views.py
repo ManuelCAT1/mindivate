@@ -29,7 +29,7 @@ def ebookPage():
 
             topic = "Claim Your eBook Now"
                     
-            htmlEBOOK = """
+            htmlEBOOK = render_template_string("""
 <html>
 <head>
     <style>
@@ -87,35 +87,40 @@ def ebookPage():
 <body>
 
 <p>Hi there {{ name }},</p>
-
+<br>
 <p>For too long you have procrastinated,</p>
-
+<br>
 <strong><u><p class="highlight">It is finally time to change that.</p></u></strong>
-
+<br>
 <p>This ebook is your first step to achieving success.</p>
-
+<br>
 <p>In addition to that,</p>
+<br>
 <p>You will also receive <strong><u>weekly emails </u></strong> from me.</p>
-
+<br>
 <p>These emails will be packed with everything I know.</p>
+<br>
 <p>Money. Gym. Masculinity. Discipline.</p>
+<br>
 <p>All of that you get for completely free...</p>
+<br>
 
 <u><p>This is the <span class="highlight">opportunity of your life,</u></span></p>
-
+<br>
 <p>If you put in the work,</p>
+<br>
 <p><strong><u><span class="highlight">There is no way for you to fail</span></p> </strong> </u>
-
+<br>
   <p><a href="mindivate.com/download/59853959457" class="email-link">👉==Click here to get the ebook==</a></p>
-
+<br>
 <p>Thank you for signing up</p>
-
+<br>
 <p>-Mindvate</p>
 
 </body>
 </html>
 
-"""
+""", namee=name)
             msg = Message(topic, recipients=[email], html=htmlEBOOK)
             mail.send(msg)
             db.session.add(new_email_user)
